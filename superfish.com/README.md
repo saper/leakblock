@@ -1,3 +1,5 @@
+superfishy.repair - let's put this thing out to sea.
+
 Doing some work to understand the #superfish creepware application that's been pre-loaded to some Lenovo lappys in recent years.
 
 
