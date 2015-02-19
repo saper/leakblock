@@ -8,4 +8,4 @@ https://cryptostorm.is/superfishy/superfish_setup.tar.gz
 
 & here's the unpacked executables:
 
-https://cryptostorm.is/superfishy/superfish_setupsuperfishy_ngmx.zip
+https://cryptostorm.is/superfishy/superfishy_ngmx.zip
