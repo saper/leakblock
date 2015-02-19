@@ -6,6 +6,9 @@ Here's the .exe:
 https://cryptostorm.is/superfishy/superfish_setup.exe
 https://cryptostorm.is/superfishy/superfish_setup.tar.gz
 
+
 & here's the unpacked executables:
 
 https://cryptostorm.is/superfishy/superfishy_ngmx.zip
+https://cryptostorm.is/superfishy/superfishy_VisualDiscovery_unpacked.exe
+https://cryptostorm.is/superfishy/SuperfishyCert_unpacked.dll
