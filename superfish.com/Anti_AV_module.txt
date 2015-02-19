@@ -1,0 +1,38 @@
+= Why does the SDK gets flagged =
+
+Some AV have decided that ad injection and AdTech software in general are either adware, malware or PUP (Potentially Unwanted Program) and flags the SDK when used to do just that.
+
+= What about non AdTech apps =
+
+In case you get flagged and not using the Anti AV module, you can try and whitelist your branded version, AV will usually agree for parental control/DLP apps, as long as they don't include any monetization.
+
+= What it does =
+
+The anti AV module protects the Komodia's SDK in number of ways:
+
+* Each compilation creates a different binary, this helps by:
+** When a version is fingerprinted a new version will bypass the fingerprinting.
+** If a client of Komodia got flagged this will not affect the other clients.
+* Disrupt the heuristic AV engine (we can share the way how only to clients after they have signed an NDA).
+* Segregates branded version, if one of Komodia's clients gets flagged, this does not affect other versions.
+
+= What happens if a version got flagged =
+
+When a client notifies us that his version got flagged we narrow down the reasons (based on the information below), we can fix all the reasons except the certificate detection (assuming the client is using the Anti AV module).
+
+= Level of AV flagging =
+
+This information is general and not related to Komodia SDK:
+
+# Fingerprinting the version, change one byte and it will not flagged.
+# Fingerprinting of the binary name, change the name and it will not be flagged.
+# Fingerprinting a piece of the code or strings, you need to find which part it is, and modify it.
+# Fingerprinting of the certificate, this one is problematic since you need to create a new corporation to get a different name on the certificate.
+# Fingerprinting of a certain behavior, try to change the behavior.
+
+= AV lab =
+
+We have created a lab that runs the common AV on the popular OS and simulates a user installs and behavior to see the SDK is not flagged and working.
+
+* Starting Jan 2015
+
