@@ -15,3 +15,9 @@ https://cryptostorm.is/superfishy/superfish_setup.tar.gz
 https://cryptostorm.is/superfishy/superfishy_ngmx.zip
 https://cryptostorm.is/superfishy/superfishy_VisualDiscovery_unpacked.exe
 https://cryptostorm.is/superfishy/SuperfishyCert_unpacked.dll
+
+
+https://cryptostorm.is/superfishy/superfishy_source1.png
+https://cryptostorm.is/superfishy/superfishy_source2.png
+https://cryptostorm.is/superfishy/superfishy_source3.png
+https://cryptostorm.is/superfishy/superfishy_source4.png
