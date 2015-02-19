@@ -4,6 +4,7 @@ Doing some work to understand the #superfish creepware application that's been p
 Here's the .exe:
 
 https://cryptostorm.is/superfishy/superfish_setup.exe
+
 https://cryptostorm.is/superfishy/superfish_setup.tar.gz
 
 
