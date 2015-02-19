@@ -36,3 +36,87 @@ vTXOlm27tRODgi9g9vJNEGg8PYnEm4b3LblS7DueqmCJGu6K9jzz5cd48z/cnOPL
 ox9LP+QrNH8FT1rt2UY8w/BTopwZXa8ZidFONTXA0STYMrC7lureBqUDgabyB3Xq
 A2y0C2kFw148PrAT1GP2
 -----END CERTIFICATE-----
+
+Unpacked: 
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            08:4d:04:71:f1:0b:1c:da:8d:e8:1a:64:b8:fc:8f:2c
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=US, O=DigiCert Inc, CN=DigiCert Secure Server CA
+        Validity
+            Not Before: Nov  5 00:00:00 2013 GMT
+            Not After : Nov 29 12:00:00 2016 GMT
+        Subject: C=US, ST=California, L=Palo Alto, O=Superfish Inc., OU=IT, CN=*.superfish.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:c9:79:ad:0b:88:b5:b7:68:22:b3:67:d2:50:8c:
+                    95:55:3d:30:22:93:98:5a:09:20:6c:5d:c5:9d:54:
+                    57:34:9f:9b:64:dd:29:b4:44:da:b0:6c:50:a3:09:
+                    2b:da:01:6c:00:3d:69:45:9e:15:53:9d:0c:5b:ce:
+                    11:87:1e:1c:8b:7d:a1:34:1d:cb:2e:3a:95:68:7b:
+                    83:fe:42:e5:2a:96:92:eb:c7:af:8e:1b:42:af:a5:
+                    2b:f9:70:f3:31:98:aa:87:4f:e5:1a:62:e8:36:b5:
+                    01:48:39:f0:01:e4:9f:7c:33:b5:3c:e3:14:23:f4:
+                    7d:40:83:c2:f3:b8:d8:74:24:1a:50:61:6b:67:d4:
+                    22:d8:de:b5:b8:10:00:0e:4a:ea:a0:41:20:58:47:
+                    2c:04:75:6b:46:58:dc:86:e1:e9:7d:81:15:5b:33:
+                    79:02:59:2a:95:14:93:b4:2b:8a:75:92:e4:3d:26:
+                    d7:01:3e:e4:f9:41:70:1d:fc:5a:94:37:d1:ab:8b:
+                    12:2c:fb:2d:34:47:5a:9a:94:62:6d:7a:69:8c:4d:
+                    24:c4:47:d5:a9:d4:e7:1e:96:0a:8e:51:10:ea:10:
+                    9c:33:35:b5:29:0e:d3:12:85:39:d2:c6:95:23:c8:
+                    24:48:c2:2d:9e:ac:16:28:59:e5:53:21:ea:50:6a:
+                    ad:9b
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Authority Key Identifier: 
+                keyid:90:71:DB:37:EB:73:C8:EF:DC:D5:1E:12:B6:34:BA:2B:5A:A0:A6:92
+
+            X509v3 Subject Key Identifier: 
+                DF:77:0F:33:54:E7:E7:3E:85:AE:C1:81:74:64:9D:9F:BB:8D:21:A4
+            X509v3 Subject Alternative Name: 
+                DNS:*.superfish.com, DNS:superfish.com
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://crl3.digicert.com/ssca-g4.crl
+
+                Full Name:
+                  URI:http://crl4.digicert.com/ssca-g4.crl
+
+            X509v3 Certificate Policies: 
+                Policy: 2.16.840.1.114412.1.1
+                  CPS: http://www.digicert.com/ssl-cps-repository.htm
+                  User Notice:
+                    Explicit Text: 
+
+            Authority Information Access: 
+                OCSP - URI:http://ocsp.digicert.com
+                CA Issuers - URI:http://cacerts.digicert.com/DigiCertSecureServerCA.crt
+
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+    Signature Algorithm: sha1WithRSAEncryption
+         89:34:de:5a:48:5a:6c:fa:6f:c7:da:7f:18:02:ce:ec:93:ea:
+         8c:55:98:f7:5a:14:fc:97:80:49:75:f1:9e:b0:eb:9c:3c:8c:
+         9b:b0:be:8b:05:14:df:a7:ab:75:81:c6:dd:4d:f1:56:61:8c:
+         b4:b4:0c:d3:75:07:06:d1:27:13:b8:c1:65:e9:c3:91:5e:7a:
+         8b:21:f4:e6:c7:fa:6d:37:41:35:b5:38:53:db:d8:14:3a:07:
+         ce:dd:a6:b3:d3:fe:93:38:d2:31:3c:7b:a0:55:df:8d:ec:4d:
+         2b:10:82:6d:fc:7d:d1:d1:0d:e7:bd:a0:d1:aa:8f:28:6f:a9:
+         10:35:65:39:6d:40:46:b7:ea:97:a6:1f:41:89:a7:c6:82:42:
+         e3:bd:35:ce:96:6d:bb:b5:13:83:82:2f:60:f6:f2:4d:10:68:
+         3c:3d:89:c4:9b:86:f7:2d:b9:52:ec:3b:9e:aa:60:89:1a:ee:
+         8a:f6:3c:f3:e5:c7:78:f3:3f:dc:9c:e3:cb:a3:1f:4b:3f:e4:
+         2b:34:7f:05:4f:5a:ed:d9:46:3c:c3:f0:53:a2:9c:19:5d:af:
+         19:89:d1:4e:35:35:c0:d1:24:d8:32:b0:bb:96:ea:de:06:a5:
+         03:81:a6:f2:07:75:ea:03:6c:b4:0b:69:05:c3:5e:3c:3e:b0:
+         13:d4:63:f6
