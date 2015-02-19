@@ -1,6 +1,5 @@
 /*
  *
- *
  *  Copyright (c) 2000 Barak Weichselbaum <barak@komodia.com>
  *  All rights reserved.
  *
