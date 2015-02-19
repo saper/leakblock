@@ -1,0 +1,86 @@
+= What is the DNS hijack module =
+
+The DNS hijack is a module that is layered on top of [[Komodia's Redirector]] and allows the programmer to defer the DNS query to another DNS server or up stream proxy.
+
+= LSP/WFP =
+
+Currently the module is working with the LSP only.
+
+= When is it used =
+
+There are numbers of scenarios is will be used:
+
+* Deferring the query to an upstream server in case of anonymizers or bypassing ISP DNS blocks.
+* It's another way to get the host of a HTTPS request without using the [[SSL Digestor]].
+* Allowing for custom DNS query to be performed.
+
+= How does it work =
+
+The module works by hooking into the DNS methods when the LSP loads, and when the app calls the methods, it replaces them with fake IPs, later in the process the Redirector knows to replace the fake IP with the host name queried and gives the programmer a choice to resolve the DNS him self, send it to up stream proxy, or just resolve it normally.
+
+= What it is not =
+
+The module does not give you access to the UDP packets of the query, in fact, the query is not made at all because it is being intercepted, at the Redirector level you are able to perform a custom query, but it's with code you need to implement. If the Redirector is resolving that query it uses normal Windows API to do so.
+
+= Limitations =
+
+There are two limitations that should be noted:
+
+* The module does not intercept the central DNS service, it works on a per app basis and the traffic of the app must be intercepted as well.
+* There are situations where some apps are using the DNS methods before loading Winsock, which means that all DNS queries before the initializations of Winsock will not go directly, this does not occurs with the leading browsers, and when it does occur, usually it's for one request only.
+* Sometimes there are need for a custom DNS query, in that case the programmer must have the ability to perform that custom query because the module does not give access to UDP packets.
+
+= Alternatives =
+
+You can implement a central DNS interception using: TDI/NDIS/WFP, usually this is done only if you want to modify the outgoing UDP packets.
+
+= How to modify the code =
+
+This is a short guide to explain how you can modify the code to develop extra features that are not supported in box
+
+== Decide if to DNS intercept the app ==
+
+The check whether to intercept the DNS in the app is performed at: spi.cpp : InterceptDNS, you need to modify this function is you want to separate the interception of the DNS from the redirection rules.
+
+== Modify the DNS functions ==
+
+The component "detours" the WinAPI DNS functions, and you can modify those functions to selectively intercept or bypass the domains being queried, this check is performed at: DNSInterceptor.cpp : Mine_gethostbyname, Mine_GetAddrInfo, Mine_GetAddrInfoW
+
+Inside each function there's an initial check at start to determine is the interception should be made, there's a boolean called bSkip, if you set it to true, the DNS query will go out directly (DNS bypass)
+
+== Forcing an application to redirect certain connections ==
+
+You can force the application to redirect even if it wasn't set in the rules, you do that inside: spi.cpp : WSPConnect
+
+First step is the conversion between the fake address to the host name which is done at this line:
+
+<pre>
+
+#if defined DNS_HIJACK && defined DNS_BUILD && defined DNS_ANON
+	//Should we do it?
+	if (gGlobalDNSInit)
+
+</pre>
+
+Then the second check is done with the rule base at:
+
+<pre>
+
+//Do we need to hijack?
+	if (bHijack &&
+		!gIgnore &&
+#ifndef INTERCEPT_LOCALHOST
+		(pAdr->sin_addr.S_un.S_un_b.s_b1!=127 || bDNS) &&
+#endif
+		!gAvoid)
+	{
+
+</pre>
+
+You'll need to modify some of the COM calls with rules of your own, evetually this is the start of the code part that performs the redirect:
+
+<pre>
+					//Yes it's our port, we need to hijack
+					//First set the original
+					SocketContext->aOriginalAddress=*pAdr;
+</pre>
